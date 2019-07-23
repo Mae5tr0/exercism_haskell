@@ -1,0 +1,38 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.1.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 34add496d561d48cf84bbf2c458a370287b39a2a8ae5ffb2afaf844b791b9b10
+
+name:           grade-school
+version:        1.0.0.4
+build-type:     Simple
+
+library
+  exposed-modules:
+      School
+  other-modules:
+      Grade
+      Student
+      Paths_grade_school
+  hs-source-dirs:
+      src
+  ghc-options: -Wall
+  build-depends:
+      base
+  default-language: Haskell2010
+
+test-suite test
+  type: exitcode-stdio-1.0
+  main-is: Tests.hs
+  other-modules:
+      Paths_grade_school
+  hs-source-dirs:
+      test
+  build-depends:
+      base
+    , grade-school
+    , hspec
+  default-language: Haskell2010
